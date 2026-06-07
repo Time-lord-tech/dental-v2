@@ -52,26 +52,35 @@ const reviews = [
   { name: 'Arlene Cruz', badge: 'Price Transparency', rating: 5, text: 'First clinic that told me the price BEFORE starting. No surprise bills. The cleaning was painless and done in under 30 minutes.' },
 ];
 
-const marqueeWords = ['Gentle Care', 'No Judgment', 'Transparent Pricing', 'Comfort First', 'Modern Equipment', 'Family Friendly', 'Walk-ins Welcome', 'Ilagan City'];
+const marqueeWords = ['Gentle Care', 'No Judgment', 'Transparent Pricing', 'Comfort First', 'Modern Equipment', 'Family Friendly', 'Walk-ins Welcome', 'Alibagu', 'Marana'];
 
 const team = [
   {
-    name: 'Dr. Michael Sunga',
-    role: 'Lead Dentist / Clinic Founder',
-    bio: 'DMD from UP Manila, practicing since 2008. Dedicated to gentle, pain-free dentistry for the Isabela community.',
-    permit: 'PRC License #0123456',
-    img: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    name: 'Maria Elena',
-    role: 'Lead Dental Hygienist',
-    bio: 'Expert in pediatric care and gentle cleanings. Always makes sure kids feel at home.',
+    name: 'Dr. Faye-Ann Tan-Barrientos',
+    role: 'Lead Dentist (Alibagu & Marana)',
+    bio: 'Alibagu: Mon, Tue, Sat (By Appt), Sun. Marana: By Appointment Only.',
+    permit: '',
     img: 'https://images.unsplash.com/photo-1559839734-2b71f1539127?auto=format&fit=crop&w=900&q=80',
   },
   {
-    name: 'Roberto Diaz',
-    role: 'Patient Coordinator',
-    bio: 'The first smile you see. handles bookings and helps you navigate your dental plan.',
+    name: 'Dr. Jasmeen Ballesteros',
+    role: 'Dentist (Alibagu)',
+    bio: 'Alibagu: Wednesday, Thursday, Friday.',
+    permit: '',
+    img: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    name: 'Dr. Ryan Christopher Domingo',
+    role: 'Dentist (Alibagu & Marana)',
+    bio: 'Alibagu: Saturday. Marana: Tuesday, Wednesday, Thursday, Friday.',
+    permit: '',
+    img: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    name: 'Dr. Alvie Axl Barrientos',
+    role: 'Dentist (Alibagu & Marana)',
+    bio: 'Alibagu: Tuesday. Marana: Monday, Saturday, Sunday.',
+    permit: '',
     img: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=900&q=80',
   },
 ];
@@ -120,8 +129,8 @@ function Navbar() {
           <a href="#" className="nav-logo">
             <div className="nav-logo-icon"><Stethoscope size={18} /></div>
             <div className="nav-logo-text">
-              <span style={{ color: logoColor }}>A&S Dental</span>
-              <span style={{ color: textColor }}>Home · Ilagan</span>
+              <span style={{ color: logoColor }}>TanDent</span>
+              <span style={{ color: textColor }}>Dental Clinic</span>
             </div>
           </a>
           <nav className="nav-links">
@@ -138,11 +147,11 @@ function Navbar() {
             ))}
           </nav>
           <div className="nav-actions">
-            <a href="https://www.google.com/maps/search/?api=1&query=A%26S+Dental+Home+VTU+II+Bldg+Ilagan+City" target="_blank" rel="noreferrer" className="nav-map-btn">
+            <a href="https://www.google.com/maps/search/?api=1&query=TanDent+Dental+Clinic+Marana+Ilagan+City" target="_blank" rel="noreferrer" className="nav-map-btn">
               <MapPin size={14} /> View Map
             </a>
-            <a href="https://m.me/asdentalhome" target="_blank" rel="noreferrer" className="nav-cta">
-              <Phone size={14} /> Book on Messenger
+            <a href="https://dental.m.mymedsph.app/dental/qpEhpCl8" target="_blank" rel="noreferrer" className="nav-cta">
+              <Phone size={14} /> Book Appointment
             </a>
           </div>
           <button
@@ -189,7 +198,7 @@ function Hero() {
   return (
     <section ref={ref} className="hero">
       <motion.div className="hero-bg" style={{ y }}>
-        <img src="/assets/hero.png" alt="Ilagan Prime Dental — warm, modern clinic interior" />
+        <img src="/assets/recep.jpg" alt="TanDent Dental Clinic — warm, modern clinic interior" />
         <div className="hero-bg-overlay" />
         <div className="hero-bg-tint" />
       </motion.div>
@@ -202,7 +211,7 @@ function Hero() {
         >
           <span className="hero-label">
             <span className="hero-label-line" />
-            VTU II Bldg, Maharlika Hwy
+            A5, Triton Mall, Alibagu & Marana Talipapa
           </span>
           <h1>
             Scared of the<br />
@@ -274,8 +283,8 @@ function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
         >
-          <img src="/assets/about-1.png" alt="Modern dental treatment room" />
-          <img src="/assets/about-2.png" alt="Welcoming clinic reception" />
+          <img src="/assets/chair.jpg" alt="Modern dental treatment room" />
+          <img src="/assets/cabinets.jpg" alt="Welcoming clinic reception" />
           <div className="about-badge">
             <span>Since 2018</span>
             <span>Ilagan City, Isabela</span>
@@ -297,15 +306,15 @@ function About() {
             A gentle practice built on trust, not fear.
           </h2>
           <p>
-            A&S Dental Home was founded to bring top-tier dental care to the heart of Ilagan. Located at the VTU II Building, we’ve built a modern, welcoming space for Isabela families.
+            TanDent Dental Clinic was founded to bring top-tier dental care to the heart of Ilagan. With branches in Alibagu and Marana, we’ve built a modern, welcoming space for Isabela families.
           </p>
           <p>
             We believe dental care shouldn't feel clinical or cold. Our team takes extra time to explain, to listen, and to make sure you feel safe and informed before any procedure begins.
           </p>
           <div className="about-features">
             {[
-              { icon: <MapPin size={18} />, label: 'Location', value: 'VTU II Building, Maharlika Hwy, Ilagan City' },
-              { icon: <Phone size={18} />, label: 'Phone / SMS', value: '0917 130 5168' },
+              { icon: <MapPin size={18} />, label: 'Locations', value: 'Alibagu & Marana, Ilagan City' },
+              { icon: <Phone size={18} />, label: 'Phone / SMS', value: '0975 447 7609' },
               { icon: <Sparkles size={18} />, label: 'Modern Equipment' },
             ].map((item, i) => (
               <div key={i} className="about-feature">
@@ -575,23 +584,23 @@ function Contact() {
             {[
               { 
                 icon: <MapPin size={18} />, 
-                label: 'Location', 
-                value: 'VTU II Building, Maharlika Hwy, Ilagan City',
-                link: 'https://www.google.com/maps/search/?api=1&query=A%26S+Dental+Home+VTU+II+Bldg+Ilagan+City' 
+                label: 'Locations', 
+                value: 'Alibagu & Marana',
+                link: 'https://www.google.com/maps/search/?api=1&query=TanDent+Dental+Clinic+Marana+Ilagan+City' 
               },
               { 
                 icon: <Phone size={18} />, 
                 label: 'Phone / SMS', 
-                value: '0917 303 8424',
-                link: 'tel:09173038424' 
+                value: '0975 447 7609',
+                link: 'tel:09754477609' 
               },
               { 
                 icon: <MessageCircle size={18} />, 
                 label: 'Facebook', 
-                value: 'A&S Dental Home',
-                link: 'https://www.facebook.com/asdentalhome/' 
+                value: 'TanDent Dental Clinic',
+                link: 'https://www.facebook.com/profile.php?id=61550862719130&mibextid=LQQJ4d' 
               },
-              { icon: <Clock size={18} />, label: 'Hours', value: 'Mon–Sat: 8AM – 5PM' },
+              { icon: <Clock size={18} />, label: 'Hours', value: 'Mon–Sat: 9AM–6PM, Sun: 1PM–6PM' },
             ].map((item, i) => (
               <div key={i} className="contact-info-item">
                 <div className="contact-info-icon">{item.icon}</div>
@@ -745,8 +754,8 @@ function Footer() {
       <div className="footer-inner">
         <div className="footer-top">
           <div className="footer-brand">
-            <h3>A&S Dental Home</h3>
-            <p>Premium, judgment-free dental care in the heart of Ilagan City. Located at VTU II Building, serving Isabela families since day one.</p>
+            <h3>TanDent Dental Clinic</h3>
+            <p>Premium, judgment-free dental care in the heart of Ilagan City. With branches in Alibagu and Marana, serving Isabela families.</p>
           </div>
           <div className="footer-col">
             <h4>Quick Links</h4>
@@ -762,7 +771,7 @@ function Footer() {
             <ul>
               <li>
                 <a 
-                  href="https://www.google.com/maps/search/?api=1&query=A%26S+Dental+Home+VTU+II+Bldg+Ilagan+City" 
+                  href="https://www.google.com/maps/search/?api=1&query=TanDent+Dental+Clinic+Marana+Ilagan+City" 
                   target="_blank" 
                   rel="noreferrer"
                   style={{ color: 'var(--gold)', fontWeight: 700 }}
@@ -770,13 +779,13 @@ function Footer() {
                   📍 Open in Google Maps
                 </a>
               </li>
-              <li><a href="tel:09173038424">📞 0917 303 8424 (Call/SMS)</a></li>
-              <li><span>🕒 Mon–Sat: 8AM – 5PM</span></li>
+              <li><a href="tel:09754477609">📞 0975 447 7609 (Call/SMS)</a></li>
+              <li><span>🕒 Mon–Sat: 9AM–6PM, Sun: 1PM–6PM</span></li>
             </ul>
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} A&S Dental Home. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} TanDent Dental Clinic. All rights reserved.</span>
           <span>Ilagan City, Isabela, Philippines</span>
         </div>
       </div>
