@@ -7,21 +7,21 @@
    ═══════════════════════════════════════════════════════ */
 
 :root {
-  /* Core Palette — Warm Earth */
-  --stone:       #F5F0EB;
-  --stone-dark:  #E8E0D8;
-  --sage:        #7A8B6F;
-  --sage-light:  #A8B89E;
-  --sage-muted:  #7A8B6F1A;
-  --sage-deep:   #5C6B52;
-  --charcoal:    #2D2926;
-  --charcoal-soft: #4A4543;
-  --charcoal-deep: #1a1715;
-  --gold:        #C9A96E;
-  --gold-light:  #D4BC8E;
-  --cream:       #FAF8F5;
+  /* Core Palette — TanDent */
+  --stone:       #F0F4F8;
+  --stone-dark:  #D9E2EC;
+  --sage:        #317DBF; /* TanDent Blue */
+  --sage-light:  #629CD1;
+  --sage-muted:  #317DBF1A;
+  --sage-deep:   #215E93;
+  --charcoal:    #1F2937;
+  --charcoal-soft: #4B5563;
+  --charcoal-deep: #111827;
+  --gold:        #5CA4A6; /* TanDent Teal */
+  --gold-light:  #82BABC;
+  --cream:       #F9FAFB;
   --white:       #FFFFFF;
-  --rose:        #C97B7B;
+  --rose:        #EF4444;
   
   /* Typography */
   --font-display: 'DM Serif Display', Georgia, serif;
