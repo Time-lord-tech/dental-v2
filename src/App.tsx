@@ -60,28 +60,28 @@ const team = [
     role: 'Lead Dentist (Alibagu & Marana)',
     bio: 'Alibagu: Mon, Tue, Sat (By Appt), Sun. Marana: By Appointment Only.',
     permit: '',
-    img: 'https://images.unsplash.com/photo-1559839734-2b71f1539127?auto=format&fit=crop&w=900&q=80',
+    img: '/assets/doc1.jpg',
   },
   {
     name: 'Dr. Jasmeen Ballesteros',
     role: 'Dentist (Alibagu)',
     bio: 'Alibagu: Wednesday, Thursday, Friday.',
     permit: '',
-    img: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=900&q=80',
+    img: '/assets/doc2.jpg',
   },
   {
     name: 'Dr. Ryan Christopher Domingo',
     role: 'Dentist (Alibagu & Marana)',
     bio: 'Alibagu: Saturday. Marana: Tuesday, Wednesday, Thursday, Friday.',
     permit: '',
-    img: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=900&q=80',
+    img: '/assets/doc3.jpg',
   },
   {
     name: 'Dr. Alvie Axl Barrientos',
     role: 'Dentist (Alibagu & Marana)',
     bio: 'Alibagu: Tuesday. Marana: Monday, Saturday, Sunday.',
     permit: '',
-    img: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=900&q=80',
+    img: '/assets/doc4.jpg',
   },
 ];
 
