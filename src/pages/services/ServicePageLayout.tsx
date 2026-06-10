@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { Phone, MessageCircle, Calendar, Home, ChevronLeft } from 'lucide-react';
+import { Phone, MessageCircle, Calendar, Home, ChevronLeft, Stethoscope, MapPin } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export const CTA_BOOK = 'https://dental.m.mymedsph.app/dental/qpEhpCl8';
