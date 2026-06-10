@@ -112,11 +112,6 @@ export default function ServicePageLayout({
 }: ServicePageProps) {
   const navigate = useNavigate();
 
-  // ── Fix: scroll to top after this component mounts (AnimatePresence delay fix) ──
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-  }, []);
-
   return (
     <motion.div
       className="service-detail-page"

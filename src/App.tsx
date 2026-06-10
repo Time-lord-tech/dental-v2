@@ -8,10 +8,17 @@ import ComfortFirst from './pages/services/ComfortFirst';
 import SmileRestoration from './pages/services/SmileRestoration';
 import DentalImplants from './pages/services/DentalImplants';
 
+// Module-level Lenis instance so ScrollToTop can reach it
+let lenisInstance: InstanceType<typeof Lenis> | null = null;
+
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (lenisInstance) {
+      lenisInstance.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
   }, [pathname]);
   return null;
 }
@@ -22,6 +29,7 @@ function LenisProvider() {
       duration: 1.4,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
+    lenisInstance = lenis;
     let rafId: number;
     function raf(time: number) {
       lenis.raf(time);
@@ -31,6 +39,7 @@ function LenisProvider() {
     return () => {
       cancelAnimationFrame(rafId);
       lenis.destroy();
+      lenisInstance = null;
     };
   }, []);
   return null;
