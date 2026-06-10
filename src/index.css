@@ -2080,20 +2080,24 @@ textarea.form-input {
 
   .ghost-pill {
     width: 2.5rem;
-    height: 2.5rem;
+    height: 3.5rem;
     padding: 0;
-    background: rgba(255, 255, 255, 0.15); /* More transparent */
+    background: rgba(255, 255, 255, 0.15); /* Keep it highly transparent */
     backdrop-filter: blur(8px);
-    border-radius: 50% !important; /* Make them perfect circles on mobile */
+    border-radius: var(--radius-sm) !important;
   }
   
-  .ghost-side--left .ghost-pill,
+  .ghost-side--left .ghost-pill {
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0 !important;
+  }
+
   .ghost-side--right .ghost-pill {
-    border-radius: 50% !important; /* Override desktop specific corners */
+    border-radius: var(--radius-sm) 0 0 var(--radius-sm) !important;
   }
   
   .ghost-pill span {
-    display: none; /* Hide text on mobile to save space */
+    display: block; /* Restore the text! */
+    font-size: 0.55rem;
   }
 
   .ghost-pill:hover, .ghost-pill:active {
