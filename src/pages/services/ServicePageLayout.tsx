@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { Phone, MessageCircle, Calendar, ChevronLeft, MapPin, Stethoscope } from 'lucide-react';
+import { Phone, MessageCircle, Calendar, ChevronLeft, MapPin, Stethoscope, Home } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export const CTA_BOOK = 'https://dental.m.mymedsph.app/dental/qpEhpCl8';
@@ -72,6 +72,20 @@ interface ServicePageProps {
   bottomCtaDesc: string;
 }
 
+function GhostHomeButton() {
+  const navigate = useNavigate();
+  return (
+    <button
+      className="ghost-home-btn"
+      onClick={() => navigate('/')}
+      aria-label="Back to Home"
+    >
+      <Home size={28} />
+      <span>Home</span>
+    </button>
+  );
+}
+
 export default function ServicePageLayout({
   badge, title, tagline, heroImg,
   whatTitle, whatBody, whatImg,
@@ -81,6 +95,11 @@ export default function ServicePageLayout({
 }: ServicePageProps) {
   const navigate = useNavigate();
 
+  // ── Fix: scroll to top after this component mounts (AnimatePresence delay fix) ──
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, []);
+
   return (
     <motion.div
       className="service-detail-page"
@@ -89,6 +108,7 @@ export default function ServicePageLayout({
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
     >
+      <GhostHomeButton />
       <ServiceNavbar />
 
       {/* ── HERO BAND ─── */}
