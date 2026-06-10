@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { Phone, MessageCircle, Calendar, Home, ChevronLeft, Stethoscope, MapPin } from 'lucide-react';
+import { Phone, MessageCircle, Calendar, Home, ArrowLeft, Stethoscope, MapPin } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export const CTA_BOOK = 'https://dental.m.mymedsph.app/dental/qpEhpCl8';
@@ -131,7 +131,7 @@ export default function ServicePageLayout({
         </div>
         <div className="service-detail-hero-content">
           <button className="service-back-btn" onClick={() => navigate('/')}>
-            <ChevronLeft size={16} /> Back to Home
+            <ArrowLeft size={16} /> Back
           </button>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
             <span className="service-badge">{badge}</span>

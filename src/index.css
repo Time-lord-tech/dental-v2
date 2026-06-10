@@ -1383,10 +1383,19 @@ textarea.form-input {
   .services-text-panel {
     width: 100%;
     padding: 4rem 2rem;
+    position: relative;
+    z-index: 10;
   }
   
   .services-image-panel {
-    display: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    z-index: 0;
+  }
+  
+  .services-image-panel img {
+    opacity: 0.3;
   }
   
   .timeline-steps {
@@ -2055,47 +2064,26 @@ textarea.form-input {
     text-align: center;
   }
 
-  /* Transform Side Buttons into Bottom Tab Bar */
+  /* Make Ghost Side Buttons smaller but keep on sides */
   .ghost-side {
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transform: none;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background: rgba(31, 41, 55, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    mix-blend-mode: normal; /* Disable difference mode on mobile */
-    padding: 0.5rem 1rem;
-    padding-bottom: env(safe-area-inset-bottom, 0.5rem);
-    gap: 0;
-    z-index: 999;
+    padding: 0;
+    gap: 0.5rem;
+  }
+  
+  .ghost-side--left {
+    left: 0.5rem;
   }
 
-  /* Remove left/right specifics on mobile */
-  .ghost-side--left, .ghost-side--right {
-    position: static;
-    flex: 1;
-    display: flex;
-    justify-content: space-around;
+  .ghost-side--right {
+    right: 0.5rem;
   }
 
   .ghost-pill {
-    width: auto;
-    height: auto;
-    background: transparent !important;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    box-shadow: none !important;
-    border-radius: 0 !important;
     padding: 0.5rem;
-    gap: 0.25rem;
-    color: rgba(255, 255, 255, 0.85);
+  }
+  
+  .ghost-pill span {
+    display: none; /* Hide text on mobile to save space */
   }
 
   .ghost-pill span {
