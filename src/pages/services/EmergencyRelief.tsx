@@ -3,7 +3,25 @@ import SEO from '../../components/SEO';
 
 export default function EmergencyRelief() {
   return (
-      whatImg="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80"
+    <>
+      <SEO 
+        title="Emergency Dental Relief | TanDent Dental Clinic"
+        description="Toothache at 2AM? No lecture, no judgment. We reserve daily emergency slots so you get relief today, not next week in Ilagan City."
+        image="https://tandent-dental.vercel.app/assets/emergency-relief.png"
+        url="https://tandent-dental.vercel.app/services/emergency-relief"
+      />
+      <ServicePageLayout
+        badge="Urgent Relief"
+        title="Emergency Dental Care — Relief Today, Not Next Week"
+        tagline="A toothache doesn't wait for a convenient time. Neither do we. We reserve daily emergency slots so you are seen the same day — no lecture, no judgment."
+        heroImg="/assets/emergency-relief.png"
+        whatTitle="What is Emergency Dental Care?"
+        whatBody={[
+          "Emergency dental care covers any acute pain, swelling, broken tooth, or lost filling that needs same-day attention. Waiting even 24–48 hours can turn a manageable problem into a costly, complex procedure.",
+          "At TanDent, we hold back daily appointment slots specifically for patients in pain. Our team is trained to assess, stabilize, and relieve discomfort quickly — so you leave feeling better, not worse.",
+          "Whether it's a cracked molar at midnight or a knocked-out tooth during a weekend game, we are your first call in Ilagan City.",
+        ]}
+        whatImg="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80"
       processTitle="How Emergency Care Works at TanDent"
       steps={[
         { title: 'Call or Message Us', desc: 'Call 0975 447 7609 or send us a Facebook message. Tell us your pain level and we reserve your slot.' },
