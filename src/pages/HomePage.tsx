@@ -86,6 +86,17 @@ function Navbar() {
   }, []);
 
   useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [mobileOpen]);
+
+  useEffect(() => {
     const lightSections = document.querySelectorAll('#about, #timeline, #testimonials, #contact');
     const observer = new IntersectionObserver(
       (entries) => {
