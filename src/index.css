@@ -1933,6 +1933,8 @@ textarea.form-input {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  /* mix-blend-mode makes the pills invert against any background color */
+  mix-blend-mode: difference;
 }
 
 .ghost-side--left {
@@ -1951,26 +1953,24 @@ textarea.form-input {
   gap: 0.35rem;
   width: 3.25rem;
   height: 4.5rem;
-  background: rgba(255, 255, 255, 0.07);
+  /* White in difference mode = inverts background: dark on light, light on dark */
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
   border: none;
-  border-right: 1px solid rgba(255, 255, 255, 0.12);
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
-  transition: all 0.3s var(--ease-out);
+  transition: width 0.3s var(--ease-out), background 0.3s var(--ease-out);
   font-family: var(--font-body);
 }
 
 .ghost-side--left .ghost-pill {
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  border-right: 1px solid rgba(255, 255, 255, 0.12);
-  border-left: none;
 }
 
 .ghost-side--right .ghost-pill {
   border-radius: var(--radius-sm) 0 0 var(--radius-sm);
-  border-left: 1px solid rgba(255, 255, 255, 0.12);
-  border-right: none;
 }
 
 .ghost-pill span {
@@ -1978,18 +1978,17 @@ textarea.form-input {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 .ghost-pill:hover {
-  background: rgba(255, 255, 255, 0.16);
-  color: var(--white);
-  width: 4.25rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.85);
+  width: 4.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .ghost-pill:active {
-  background: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.95);
   transform: scale(0.96);
 }
 
