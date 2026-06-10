@@ -2079,21 +2079,27 @@ textarea.form-input {
   }
 
   .ghost-pill {
-    padding: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.15); /* More transparent */
+    backdrop-filter: blur(8px);
+    border-radius: 50% !important; /* Make them perfect circles on mobile */
+  }
+  
+  .ghost-side--left .ghost-pill,
+  .ghost-side--right .ghost-pill {
+    border-radius: 50% !important; /* Override desktop specific corners */
   }
   
   .ghost-pill span {
     display: none; /* Hide text on mobile to save space */
   }
 
-  .ghost-pill span {
-    font-size: 0.6rem;
-  }
-
   .ghost-pill:hover, .ghost-pill:active {
-    background: transparent !important;
-    transform: none;
-    color: var(--gold);
+    background: rgba(255, 255, 255, 0.25) !important;
+    transform: scale(0.95);
+    color: var(--white);
   }
 
   /* Ensure body has padding so content isn't hidden behind the sticky bottom bar */
