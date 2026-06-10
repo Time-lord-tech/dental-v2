@@ -6,6 +6,7 @@ import {
   Star, Sparkles, Menu, X, MessageCircle, Calendar
 } from 'lucide-react';
 import SEO from '../components/SEO';
+import FAQ from '../components/FAQ';
 
 // ── DATA ──────────────────────────────────────────────────────────────────────
 
@@ -642,6 +643,7 @@ export default function HomePage() {
       <Timeline />
       <Testimonials />
       <Team />
+      <FAQ />
       <CtaBanner />
       <Contact />
       <Footer />
