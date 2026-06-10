@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { Phone, MessageCircle, Calendar, ChevronLeft, MapPin, Stethoscope, Home } from 'lucide-react';
+import { Phone, MessageCircle, Calendar, Home } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export const CTA_BOOK = 'https://dental.m.mymedsph.app/dental/qpEhpCl8';
@@ -72,17 +72,34 @@ interface ServicePageProps {
   bottomCtaDesc: string;
 }
 
-function GhostHomeButton() {
+function GhostSideButtons() {
   const navigate = useNavigate();
   return (
-    <button
-      className="ghost-home-btn"
-      onClick={() => navigate('/')}
-      aria-label="Back to Home"
-    >
-      <Home size={28} />
-      <span>Home</span>
-    </button>
+    <>
+      {/* ── LEFT SIDE: Home + Call ─── */}
+      <div className="ghost-side ghost-side--left">
+        <button className="ghost-pill" onClick={() => navigate('/')} aria-label="Back to Home">
+          <Home size={20} />
+          <span>Home</span>
+        </button>
+        <a href={CTA_CALL} className="ghost-pill" aria-label="Call Us">
+          <Phone size={20} />
+          <span>Call</span>
+        </a>
+      </div>
+
+      {/* ── RIGHT SIDE: Book + Facebook ─── */}
+      <div className="ghost-side ghost-side--right">
+        <a href={CTA_BOOK} target="_blank" rel="noreferrer" className="ghost-pill" aria-label="Book Appointment">
+          <Calendar size={20} />
+          <span>Book</span>
+        </a>
+        <a href={CTA_FB} target="_blank" rel="noreferrer" className="ghost-pill" aria-label="Facebook">
+          <MessageCircle size={20} />
+          <span>FB</span>
+        </a>
+      </div>
+    </>
   );
 }
 
@@ -108,7 +125,7 @@ export default function ServicePageLayout({
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
     >
-      <GhostHomeButton />
+      <GhostSideButtons />
       <ServiceNavbar />
 
       {/* ── HERO BAND ─── */}
