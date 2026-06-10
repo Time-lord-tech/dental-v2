@@ -3,8 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Phone, MessageCircle, Calendar, Home, ArrowLeft, Stethoscope, MapPin } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-// export const CTA_BOOK = 'https://dental.m.mymedsph.app/dental/qpEhpCl8?fbclid=IwY2xjawSWfNhleHRuA2FlbQIxMABicmlkETFIOENFQlg4ZzhqT09IWTBac3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHuplwbG43qtZqJ-8ydwm5YE34Jj7eYaZttMv5mbfaEN8MWWrgg_vUIVowdbg_aem_B4e99LJO2tR4bQck1l7M4w';
-export const CTA_BOOK = '#contact'; // Disabled for sample pitching
+export const CTA_BOOK = 'https://dental.m.mymedsph.app/dental/qpEhpCl8?fbclid=IwY2xjawSWfNhleHRuA2FlbQIxMABicmlkETFIOENFQlg4ZzhqT09IWTBac3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHuplwbG43qtZqJ-8ydwm5YE34Jj7eYaZttMv5mbfaEN8MWWrgg_vUIVowdbg_aem_B4e99LJO2tR4bQck1l7M4w';
 export const CTA_CALL = 'tel:09754477609';
 export const CTA_FB = 'https://www.facebook.com/profile.php?id=61550862719130&mibextid=LQQJ4d';
 export const CTA_MAP = 'https://www.google.com/maps/search/?api=1&query=TanDent+Dental+Clinic+Marana+Ilagan+City';
