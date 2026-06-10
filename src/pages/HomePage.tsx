@@ -67,7 +67,7 @@ const team = [
 ];
 
 // ── SHARED CTA STYLES ─────────────────────────────────────────────────────────
-export const CTA_BOOK = 'https://dental.m.mymedsph.app/dental/qpEhpCl8';
+export const CTA_BOOK = 'https://dental.m.mymedsph.app/dental/qpEhpCl8?fbclid=IwY2xjawSWfNhleHRuA2FlbQIxMABicmlkETFIOENFQlg4ZzhqT09IWTBac3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHuplwbG43qtZqJ-8ydwm5YE34Jj7eYaZttMv5mbfaEN8MWWrgg_vUIVowdbg_aem_B4e99LJO2tR4bQck1l7M4w';
 export const CTA_CALL = 'tel:09754477609';
 export const CTA_FB = 'https://www.facebook.com/profile.php?id=61550862719130&mibextid=LQQJ4d';
 export const CTA_MAP = 'https://www.google.com/maps/search/?api=1&query=TanDent+Dental+Clinic+Marana+Ilagan+City';
@@ -207,7 +207,7 @@ function Hero() {
               We built our practice around one idea: dental care should never feel scary. Transparent pricing, gentle hands, and zero judgment — always.
             </p>
             <div className="hero-actions">
-              <a href="#contact" className="btn-primary">
+              <a href={CTA_BOOK} target="_blank" rel="noreferrer" className="btn-primary">
                 Schedule a Visit <ArrowRight size={16} />
               </a>
               <a href="#timeline" className="btn-ghost">
@@ -230,6 +230,9 @@ function Hero() {
         transition={{ delay: 0.6, duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
       >
         <span className="hero-cta-strip-label">Contact us directly:</span>
+        <a href={CTA_BOOK} target="_blank" rel="noreferrer" className="hero-cta-pill hero-cta-pill--call" style={{ background: 'var(--sage)', color: 'white', borderColor: 'var(--sage)' }}>
+          <Calendar size={15} /> Book Online
+        </a>
         <a href={CTA_CALL} className="hero-cta-pill hero-cta-pill--call">
           <Phone size={15} /> Call Now: 0975 447 7609
         </a>
@@ -553,7 +556,10 @@ function CtaBanner() {
       <motion.div className="cta-banner" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
         <h2>Your smile deserves gentle care</h2>
         <p>Walk in with fear, walk out with a plan. No pressure, no judgment — just honest, affordable dentistry.</p>
-        <a href="#contact" className="btn-primary">Get Instant SMS Confirmation <ArrowRight size={16} /></a>
+        <div className="hero-actions" style={{ justifyContent: 'center' }}>
+          <a href={CTA_BOOK} target="_blank" rel="noreferrer" className="btn-primary">Book Online Now <ArrowRight size={16} /></a>
+          <a href="#contact" className="btn-ghost" style={{ background: 'rgba(0,0,0,0.1)', color: 'var(--charcoal)', padding: '1rem 2rem', borderRadius: 'var(--radius-xl)' }}>Send an Inquiry</a>
+        </div>
       </motion.div>
     </div>
   );
@@ -605,6 +611,7 @@ function Footer() {
           <div className="footer-col">
             <h4>Find Us</h4>
             <ul>
+              <li><a href={CTA_BOOK} target="_blank" rel="noreferrer" style={{ color: 'var(--sage)', fontWeight: 700 }}>📅 Book Appointment Online</a></li>
               <li><a href={CTA_MAP} target="_blank" rel="noreferrer" style={{ color: 'var(--gold)', fontWeight: 700 }}>📍 Open in Google Maps</a></li>
               <li><a href={CTA_CALL}>📞 0975 447 7609 (Call/SMS)</a></li>
               <li><span>🕒 Mon–Sat: 9AM–6PM, Sun: 1PM–6PM</span></li>
