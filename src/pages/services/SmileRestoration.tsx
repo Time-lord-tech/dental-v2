@@ -1,12 +1,20 @@
 import ServicePageLayout from './ServicePageLayout';
+import SEO from '../../components/SEO';
 
 export default function SmileRestoration() {
   return (
-    <ServicePageLayout
-      badge="Confidence Restored"
-      title="Love Your Smile Again — Whitening, Veneers & Bonding"
-      tagline="From simple teeth whitening to full composite veneers — we use natural-look materials so your smile looks real and beautiful, never fake or plastic."
-      heroImg="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1600&q=80"
+    <>
+      <SEO 
+        title="Smile Restoration & Whitening | TanDent Dental Clinic"
+        description="From simple teeth whitening to full composite veneers — we use natural-look materials so your smile looks real and beautiful."
+        image="https://tandent-dental.vercel.app/assets/smile-restoration.png"
+        url="https://tandent-dental.vercel.app/services/smile-restoration"
+      />
+      <ServicePageLayout
+        badge="Confidence Restored"
+        title="Love Your Smile Again — Whitening, Veneers & Bonding"
+        tagline="From simple teeth whitening to full composite veneers — we use natural-look materials so your smile looks real and beautiful, never fake or plastic."
+        heroImg="/assets/smile-restoration.png"
       whatTitle="What is Smile Restoration?"
       whatBody={[
         "Smile restoration covers a range of cosmetic dental procedures designed to improve the appearance, shape, color, and symmetry of your teeth. At TanDent, every smile makeover starts with a free consultation.",
@@ -29,5 +37,6 @@ export default function SmileRestoration() {
       bottomCtaTitle="Ready to love your smile?"
       bottomCtaDesc="Book your free smile consultation today. No commitment required — just an honest conversation about what is possible for your unique smile."
     />
+    </>
   );
 }

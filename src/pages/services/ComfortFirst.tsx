@@ -1,12 +1,20 @@
 import ServicePageLayout from './ServicePageLayout';
+import SEO from '../../components/SEO';
 
 export default function ComfortFirst() {
   return (
-    <ServicePageLayout
-      badge="Comfort First"
-      title="Dental Care Designed for People Who Are Scared"
-      tagline="Our clinic was founded by a former dental-phobe. We use Pause Anytime protocols, ultrasonic tools, and calming techniques so you feel nothing but safe."
-      heroImg="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1600&q=80"
+    <>
+      <SEO 
+        title="Comfort First Dental Care | TanDent Dental Clinic"
+        description="Dental care designed for people who are scared. We use Pause Anytime protocols and ultrasonic tools so you feel nothing but calm."
+        image="https://tandent-dental.vercel.app/assets/comfort-first.png"
+        url="https://tandent-dental.vercel.app/services/comfort-first"
+      />
+      <ServicePageLayout
+        badge="Comfort First"
+        title="Dental Care Designed for People Who Are Scared"
+        tagline="Our clinic was founded by a former dental-phobe. We use Pause Anytime protocols, ultrasonic tools, and calming techniques so you feel nothing but safe."
+        heroImg="/assets/comfort-first.png"
       whatTitle="What is Comfort-First Dental Care?"
       whatBody={[
         "Dental anxiety is one of the most common reasons people avoid necessary dental care — sometimes for years. At TanDent, we have built every part of our workflow around removing that fear.",
@@ -29,5 +37,6 @@ export default function ComfortFirst() {
       bottomCtaTitle="Your comfort is our highest priority."
       bottomCtaDesc="Book a free anxiety consultation and let us walk you through the process at your own pace — completely pressure-free."
     />
+    </>
   );
 }

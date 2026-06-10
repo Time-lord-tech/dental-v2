@@ -1,12 +1,20 @@
 import ServicePageLayout from './ServicePageLayout';
+import SEO from '../../components/SEO';
 
 export default function DentalImplants() {
   return (
-    <ServicePageLayout
-      badge="Permanent Fix"
-      title="Dental Implants — Teeth That Feel Like Your Own"
-      tagline="Titanium implants that look, feel, and chew like your natural teeth. Eat what you want, smile freely, and never worry about slipping dentures again."
-      heroImg="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1600&q=80"
+    <>
+      <SEO 
+        title="Dental Implants | TanDent Dental Clinic"
+        description="Permanent dental implants that look, feel, and chew like natural teeth. Book an implant assessment in Ilagan City today."
+        image="https://tandent-dental.vercel.app/assets/dental-implants.png"
+        url="https://tandent-dental.vercel.app/services/dental-implants"
+      />
+      <ServicePageLayout
+        badge="Permanent Fix"
+        title="Dental Implants — Teeth That Feel Like Your Own"
+        tagline="Titanium implants that look, feel, and chew like your natural teeth. Eat what you want, smile freely, and never worry about slipping dentures again."
+        heroImg="/assets/dental-implants.png"
       whatTitle="What are Dental Implants?"
       whatBody={[
         "A dental implant is a titanium post surgically placed into the jawbone to act as an artificial tooth root. Once the implant fuses with the bone (a process called osseointegration), a natural-looking crown is attached on top.",
@@ -29,5 +37,6 @@ export default function DentalImplants() {
       bottomCtaTitle="Ready to eat, speak, and smile freely again?"
       bottomCtaDesc="Book an implant assessment today and get a full written treatment plan with transparent pricing — no obligations, no pressure."
     />
+    </>
   );
 }

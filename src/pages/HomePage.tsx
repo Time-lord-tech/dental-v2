@@ -5,6 +5,7 @@ import {
   Stethoscope, Phone, MapPin, Clock, ChevronDown, ArrowRight,
   Star, Sparkles, Menu, X, MessageCircle, Calendar
 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 // ── DATA ──────────────────────────────────────────────────────────────────────
 
@@ -15,7 +16,7 @@ const services = [
     subtitle: 'URGENT RELIEF',
     desc: 'Toothache at 2AM? No lecture, no judgment. We reserve daily emergency slots so you get relief today, not next week.',
     price: 'Immediate Openings',
-    img: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=80',
+    img: '/assets/emergency-relief.png',
   },
   {
     slug: 'comfort-first',
@@ -23,7 +24,7 @@ const services = [
     subtitle: 'COMFORT FIRST',
     desc: 'Found by a former dental-phobe. We use "Pause Anytime" protocols and ultrasonic tools so you feel nothing but calm.',
     price: 'From ₱800',
-    img: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80',
+    img: '/assets/comfort-first.png',
   },
   {
     slug: 'smile-restoration',
@@ -31,7 +32,7 @@ const services = [
     subtitle: 'CONFIDENCE RESTORED',
     desc: 'From whitening to veneers. We use natural-look composite bonding so your smile looks real, not plastic.',
     price: 'Consult is Free',
-    img: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=900&q=80',
+    img: '/assets/smile-restoration.png',
   },
   {
     slug: 'dental-implants',
@@ -39,7 +40,7 @@ const services = [
     subtitle: 'PERMANENT FIX',
     desc: 'Titanium implants that feel and chew like real teeth. Eat what you want again without worrying about dentures slipping.',
     price: 'Payment Plans Available',
-    img: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80',
+    img: '/assets/dental-implants.png',
   },
 ];
 
@@ -613,6 +614,7 @@ function Footer() {
 export default function HomePage() {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }}>
+      <SEO />
       <Navbar />
       <Hero />
       <Stats />

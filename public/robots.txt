@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tandent-dental.vercel.app/sitemap.xml
